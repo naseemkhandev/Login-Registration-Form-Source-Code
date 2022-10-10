@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <link rel="stylesheet" href="style.css">
+   <title>Registrtion form</title>
+</head>
+
+<body>
+
+   <div class="container">
+      <div class="toggle-box">
+         <span id="toggle-btn"></span>
+         <div onclick="signInn()" class="btns active" id="signin-btn">
+            <i class="fa-solid fa-user"></i><p>Sign In</p>
+         </div>
+         <div onclick="signUpp()" class="btns" id="signup-btn">
+           <i class="fa-solid fa-user-plus"></i><p>Sign Up</p>
+         </div>
+      </div>
+
+      <form id="signIn-form" class="form">
+         <div class="input-box">
+            <img src="images/user.png"><input type="text" placeholder="Username">
+         </div>
+         <div class="input-box">
+            <img src="images/password.png"><input type="password" placeholder="Password">
+         </div>
+
+         <a href="#">Forget Password?</a>
+
+         <input type="checkbox"><label>Remember Me</label>
+         <button>Sign In</button>
+
+         <div class="account">
+            <p>Don't have an account?</p><a href="#" onclick="signUpp()">Sign Up</a>
+         </div>
+      </form>
+
+      <form id="signUp-form" class="form">
+         <div class="input-box">
+            <img src="images/user.png"><input type="text" placeholder="Username">
+         </div>
+         <div class="input-box">
+            <img src="images/email.png"><input type="email" placeholder="Email">
+         </div>
+         <div class="input-box">
+            <img src="images/password.png"><input type="password" placeholder="Password">
+         </div>
+
+         <a href="#">Forget Password?</a>
+
+         <input type="checkbox"><label>Accept Term & Conditions</label>
+         <button>Sign Up</button>
+      </form>
+   </div>
+
+
+   <script>
+      let signInForm = document.getElementById('signIn-form');
+      let signUpForm = document.getElementById('signUp-form');
+      let signInBtn = document.getElementById('signin-btn');
+      let signUpBtn = document.getElementById('signup-btn');
+      let toggleBtn = document.getElementById('toggle-btn');
+
+      function signInn(){
+         signInForm.style.left = '0px';
+         signUpForm.style.left = '350px';
+         toggleBtn.style.left = '45px';
+         signInBtn.classList.add("active");
+         signUpBtn.classList.remove("active");
+      }
+
+      function signUpp(){
+         signUpForm.style.left = '0px';
+         signInForm.style.left = '-350px';
+         toggleBtn.style.left = '195px';
+         signUpBtn.classList.add("active");
+         signInBtn.classList.remove("active");
+      }
+
+   </script>
+<script src="https://kit.fontawesome.com/c18b08c464.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
