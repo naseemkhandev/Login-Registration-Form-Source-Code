@@ -1,0 +1,161 @@
+*{
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+   width: 100%;
+   height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background: url(images/background-img.jpg);
+   background-size: cover;
+   background-position: top;
+   background-repeat: no-repeat;
+}
+
+
+.container{
+   width: 350px;
+   height: 470px;
+   backdrop-filter: blur(10px);
+   background-color: #ffffff2f;
+   position: relative;
+   padding: 25px 0;
+   border-radius: 5px;
+   overflow: hidden;
+}
+
+.form{
+   width: 100%;
+   padding: 20px;
+   position: absolute;
+   transition: all .5s;
+}
+
+#signUp-form{
+   left: 350px;
+}
+
+.toggle-box{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: relative;
+}
+
+.btns{
+   display: flex;
+   align-items: center;
+   margin: 10px 40px;
+   z-index: 10;
+   cursor: pointer;
+   color: #6739ff;
+}
+
+.btns p{
+   margin-top: 2px;
+}
+
+.btns img{
+   width: 22px;
+   margin-right: 5px;
+}
+
+.btns i{
+   font-size: 10px;
+}
+
+#toggle-btn{
+   position: absolute;
+   top: 0;
+   left: 45px;
+   background-color: #6739ff;
+   width: 110px;
+   height: 100%;
+   border-radius: 5px;
+   padding: 10px;
+   cursor: pointer;
+   transition: all .5s;
+}
+
+.btns i{
+   font-size: 13px;
+   margin-right: 5px;
+   margin-top: 2px;
+}
+
+.active{
+   color: #fff;
+}
+
+
+.input-box{
+   position: relative;
+}
+
+.input-box img{
+   position: absolute;
+   top: 25px;
+   left: 10px;
+   width: 18px;
+   z-index: 10;
+}
+input{
+   width: 100%;
+   outline: none;
+   border: none;
+   background-color: #ffffffdc;
+   backdrop-filter: blur(20px);
+   padding: 15px 10px;
+   padding-left: 35px;
+   margin: 12px 0;
+   border-radius: 5px;
+   box-shadow: 0 0 3px #0000003b;
+}
+
+input[type="checkbox"]{
+   width: fit-content; 
+   margin: 0 5px 0 10px;
+}
+
+
+a{
+   text-decoration: none;
+   display: block;
+   margin-bottom: 20px;
+}
+
+button{
+   display: block;
+   width: 100%;
+   padding: 13px 0;
+   margin-top: 25px;
+   outline: none;
+   border: none;
+   background-color: #6739ff;
+   color: #fff;
+   border-radius: 5px;
+   box-shadow: 0 0 5px #0000002b;
+   font-size: 15px;
+   cursor: pointer;
+}
+
+.account{
+   display: flex;
+   background-color: #ffffff73;
+   backdrop-filter: blur(20px);
+   box-shadow: 0 0 3px #0000002b;
+   padding: 0 10px;
+   height: 48px;
+   margin-top: 40px;
+   border-radius: 5px;
+}
+
+.account :is(a,p){
+   padding-top: 17px;
+   font-size: 14px;
+}
